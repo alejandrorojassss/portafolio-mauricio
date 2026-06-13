@@ -1,0 +1,387 @@
+.section {
+  padding: 120px 32px;
+  position: relative;
+  perspective: 1200px;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+}
+
+/* Header y controles */
+.headerContainer {
+  max-width: 1100px;
+  margin: 0 auto 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.header {
+  flex: 1;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  background: linear-gradient(135deg, var(--text) 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Controles */
+.controls {
+  display: flex;
+  gap: 8px;
+}
+
+.scrollBtn {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-slow);
+  position: relative;
+  overflow: hidden;
+}
+
+.scrollBtn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(0, 255, 136, 0.1) 0%,
+    transparent 80%
+  );
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.scrollBtn:hover:not(.disabled)::before {
+  opacity: 1;
+}
+
+.scrollBtn:hover:not(.disabled) {
+  border-color: var(--border-accent);
+  color: var(--accent);
+  background: var(--bg-card-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0, 255, 136, 0.15);
+}
+
+.scrollBtn.disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Carrusel */
+.carouselWrapper {
+  position: relative;
+  overflow: hidden;
+  margin: 0 -32px;
+  padding: 0 32px;
+}
+
+.carousel {
+  display: flex;
+  gap: 32px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding: 20px 0;
+
+  /* Ocultar scrollbar pero permitir scroll */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* Tarjetas 3D */
+.card3d {
+  flex: 0 0 440px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-slow);
+  cursor: pointer;
+  scroll-snap-align: start;
+  position: relative;
+  overflow: hidden;
+
+  /* Efecto de luz dinámica */
+  background-image: radial-gradient(
+    circle at 30% 30%,
+    rgba(0, 255, 136, 0.08) 0%,
+    transparent 50%
+  );
+
+  transform-style: preserve-3d;
+  will-change: transform, box-shadow;
+}
+
+/* Efecto de borde luminoso */
+.card3d::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid transparent;
+  border-radius: 16px;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 255, 136, 0.2) 0%,
+    transparent 50%,
+    rgba(0, 255, 136, 0.05) 100%
+  );
+  opacity: 0;
+  transition: opacity var(--transition-slow);
+  pointer-events: none;
+}
+
+.card3d:hover::before {
+  opacity: 1;
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 28px;
+  position: relative;
+  z-index: 2;
+}
+
+.cardLinks {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.cardLink {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(0, 255, 136, 0.08);
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition);
+}
+
+.cardLink:hover {
+  background: rgba(0, 255, 136, 0.2);
+  color: var(--accent);
+  transform: translateY(-3px) scale(1.1);
+}
+
+.cardName {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  margin-bottom: 14px;
+  line-height: 1.2;
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(135deg, var(--text) 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: all var(--transition-slow);
+}
+
+.cardDesc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  flex: 1;
+  margin-bottom: 28px;
+  position: relative;
+  z-index: 2;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  background: rgba(0, 255, 136, 0.1);
+  border: 1px solid rgba(0, 255, 136, 0.2);
+  border-radius: 6px;
+  transition: all var(--transition);
+}
+
+.tag:hover {
+  background: rgba(0, 255, 136, 0.2);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* Indicadores (dots) */
+.dotsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 56px;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border);
+  background: transparent;
+  cursor: pointer;
+  transition: all var(--transition-slow);
+  position: relative;
+}
+
+.dot::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border: 1.5px solid var(--border);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity var(--transition-slow);
+}
+
+.dot:hover {
+  border-color: var(--accent);
+  background: rgba(0, 255, 136, 0.2);
+}
+
+.dot:hover::before {
+  opacity: 1;
+}
+
+.dot.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+  width: 28px;
+  border-radius: 6px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .headerContainer {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .card3d {
+    flex: 0 0 380px;
+    padding: 28px;
+  }
+
+  .carousel {
+    gap: 24px;
+  }
+
+  .title {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 80px 16px;
+  }
+
+  .carouselWrapper {
+    margin: 0 -16px;
+    padding: 0 16px;
+  }
+
+  .headerContainer {
+    margin-bottom: 40px;
+  }
+
+  .card3d {
+    flex: 0 0 calc(100vw - 32px - 32px);
+    padding: 24px;
+  }
+
+  .cardName {
+    font-size: 1.2rem;
+  }
+
+  .cardDesc {
+    font-size: 0.9rem;
+  }
+
+  .controls {
+    display: flex;
+    gap: 6px;
+  }
+
+  .scrollBtn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .dotsContainer {
+    margin-top: 40px;
+    gap: 8px;
+  }
+}
+
+/* Prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .card3d,
+  .scrollBtn,
+  .tag,
+  .dot {
+    transform: none !important;
+    transition: none !important;
+  }
+}
