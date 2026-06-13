@@ -24,7 +24,7 @@ export default function Navbar() {
       <div className={styles.inner}>
         <a href="#" className={styles.logo}>
           <span className={styles.logoBracket}>&lt;</span>
-          Ruiz
+          Rojas
           <span className={styles.logoBracket}>/&gt;</span>
         </a>
 
