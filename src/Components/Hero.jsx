@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import FloatingCode from "./FloatingCode";
+import FloatingCode from "./Floatingcode";
 import styles from "../Styles/Hero.module.css";
 
 const ROLES = [
