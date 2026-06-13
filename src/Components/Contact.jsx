@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 import styles from "../Styles/Contact.module.css";
 
-const WA_NUMBER = "573226506664";
+const WA_NUMBER = "573186792552";
 
 export default function Contact() {
   const ref = useScrollReveal();
@@ -46,33 +46,33 @@ export default function Contact() {
           </p>
           <div className={styles.links}>
             <a
-              href="https://mail.google.com/mail/?view=cm&to=juanolopez1012@gmail.com"
+              href="https://mail.google.com/mail/?view=cm&to=alejorojascardenas@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.contactLink}
             >
               <MailIcon />
-              juanolopez1012@gmail.com
+              alejorojascardenas@gmail.com
             </a>
 
             <a
-              href="https://github.com/JuanRuiz1012/"
+              href="https://github.com/alejandrorojassss"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.contactLink}
             >
               <GithubIcon />
-              https://github.com/JuanRuiz1012/
+              github.com/alejandrorojassss
             </a>
 
             <a
-              href="https://www.linkedin.com/in/felipe-ruiz-4088a9267"
+              href="https://www.linkedin.com/in/mauricio-alejandro-rojas-cardenas-769965316/"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.contactLink}
             >
               <LinkedinIcon />
-              linkedin.com/in/felipe-ruiz-4088a9267
+              linkedin.com/in/mauricio-alejandro-rojas-cardenas-769965316
             </a>
 
             <a
@@ -183,7 +183,7 @@ export default function Contact() {
       <footer className={styles.footer}>
         <p className={styles.footerText}>
           construido por{" "}
-          <span className={styles.footerAccent}>· Juan Ruiz ·</span> —{" "}
+          <span className={styles.footerAccent}>· Alejandro Rojas ·</span> —{" "}
           {new Date().getFullYear()}
         </p>
 

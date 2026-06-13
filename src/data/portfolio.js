@@ -1,29 +1,44 @@
 export const skills = {
   frontend: [
     "React",
-    "React Native",
     "JavaScript",
     "TypeScript",
+    "HTML5",
+    "CSS3",
     "Material UI",
-    "Tailwind CSS",
-    "CSS / SCSS",
-    "HTML",
+    "Bootstrap",
+    "Vite",
   ],
+
   backend: [
-    ".NET",
-    "C#",
-    "Python",
+    "Node.js",
+    "Express",
     "Spring Boot",
     "PostgreSQL",
     "MySQL",
+    "REST APIs",
+    "Microservices",
     "Clean Architecture",
     "Hexagonal Architecture",
-    "Component Based Architecture",
-    "MediatR",
-    "Microservices",
   ],
-  tools: ["Git", "Docker", "Kubernetes", "GitHub Actions", "Vite", "REST APIs"],
-  languages: ["Python", "C++", "Java", "SQL", "JavaScript", "C#", "TypeScript"],
+
+  tools: [
+    "Git",
+    "GitHub",
+    "Docker",
+    "Kubernetes",
+    "Postman",
+    "GitHub Actions",
+  ],
+
+  languages: [
+    "Java",
+    "JavaScript",
+    "TypeScript",
+    "Python",
+    "C++",
+    "SQL",
+  ],
 };
 
 export const projects = [
@@ -91,12 +106,12 @@ export const experience = [
     role: "Full Stack Developer",
     company: "Q-Services",
     period: "2024 — Presente",
-    desc: "Full Stack Developer con experiencia en Arquitectura Limpia, Microservicios y API Gateway. Desarrollo aplicaciones escalables con React, .NET y PostgreSQL, implementando frontend modular, componentes reutilizables e integración de servicios REST.",
+    desc: "Full Stack Developer con experiencia en Arquitectura Limpia, Microservicios y API Gateway. Desarrollo aplicaciones escalables con React y PostgreSQL, implementando frontend modular, componentes reutilizables e integración de servicios REST.",
   },
   {
     role: "Estudiante — Ingeniería de Sistemas",
     company: "Universidad del Valle",
     period: "2023 — Presente",
-    desc: " Estudiante de octavo semestre de Ingeniería de Sistemas, con experiencia en desarrollo Full Stack, bases de datos y cloud. Destaco por pensamiento analítico, aprendizaje rápido, trabajo colaborativo y orientación a resultados.",
+    desc: " Estudiante de septimo semestre de Ingeniería de Sistemas, con experiencia en desarrollo Full Stack, bases de datos y cloud. Destaco por pensamiento analítico, aprendizaje rápido, trabajo colaborativo y orientación a resultados.",
   },
 ];

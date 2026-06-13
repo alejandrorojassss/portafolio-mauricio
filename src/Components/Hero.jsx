@@ -4,10 +4,10 @@ import styles from "../Styles/Hero.module.css";
 
 const ROLES = [
   "Ingeniero de Sistemas",
-  "Frontend Developer",
-  "React Engineer",
-  "Clean Architecture",
-  "Full Stack Dev",
+  "Full Stack Developer",
+  "React Developer",
+  "Spring Boot Developer",
+  "Software Architecture",
 ];
 
 function useTypewriter(words, speed = 80, pause = 1800) {
@@ -53,7 +53,7 @@ export default function Hero() {
         <p className={styles.greeting}>Hola, soy</p>
 
         <h1 className={styles.name}>
-          Juan Ruiz
+          Alejandro Rojas
           <span className={styles.dot}>.</span>
         </h1>
 
@@ -63,9 +63,9 @@ export default function Hero() {
         </div>
 
         <p className={styles.tagline}>
-          Construyo soluciones que{" "}
+          Desarrollo aplicaciones web modernas{" "}
           <span className={styles.highlight}>importan</span> —<br />
-          con creatividad y atención al detalle.
+          combinando desarrollo, arquitectura y aprendizaje continuo.
         </p>
 
         <div className={styles.actions}>
@@ -85,7 +85,7 @@ export default function Hero() {
 
         <div className={styles.socials}>
           <a
-            href="https://github.com/JuanRuiz1012/"
+            href="https://github.com/alejandrorojassss"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.social}
@@ -93,14 +93,14 @@ export default function Hero() {
             <GithubIcon />
           </a>
           <a
-            href="https://www.linkedin.com/in/felipe-ruiz-4088a9267"
+            href="https://www.linkedin.com/in/mauricio-alejandro-rojas-cardenas-769965316/"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.social}
           >
             <LinkedinIcon />
           </a>
-          <a  href="https://mail.google.com/mail/?view=cm&to=juanolopez1012@gmail.com" target= "_blank" rel="noopener noreferrer" className={styles.social}>
+          <a  href="https://mail.google.com/mail/?view=cm&to=alejorojascardenas@gmail.com" target= "_blank" rel="noopener noreferrer" className={styles.social}>
             <MailIcon />
           </a>
         </div>

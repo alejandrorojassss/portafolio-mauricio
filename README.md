@@ -1,18 +1,81 @@
-# React + Vite
+# Portafolio Web — Mauricio Alejandro Rojas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portafolio personal desarrollado con React y Vite para presentar mi perfil profesional, experiencia, proyectos y habilidades como estudiante de Ingeniería de Sistemas y desarrollador Full Stack.
 
-Currently, two official plugins are available:
+## Tecnologías Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Frontend
 
-## React Compiler
+* React
+* JavaScript
+* Vite
+* CSS Modules
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+### Backend y Bases de Datos
 
-Note: This will impact Vite dev & build performances.
+* Spring Boot
+* Node.js
+* PostgreSQL
+* MySQL
 
-## Expanding the ESLint configuration
+### DevOps y Herramientas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Git
+* GitHub
+* Docker
+* Kubernetes
+* GitHub Actions
+
+## Características
+
+* Diseño responsive
+* Animaciones de scroll
+* Efecto typewriter en la sección principal
+* Sección de proyectos destacados
+* Información de contacto integrada con WhatsApp
+* Presentación de habilidades técnicas
+* Experiencia académica y profesional
+
+## Instalación
+
+Clonar el repositorio:
+
+```bash
+git clone https://github.com/alejandrorojassss/portafolio-mauricio.git
+```
+
+Entrar al proyecto:
+
+```bash
+cd portafolio-mauricio
+```
+
+Instalar dependencias:
+
+```bash
+npm install
+```
+
+Ejecutar en modo desarrollo:
+
+```bash
+npm run dev
+```
+
+Generar versión de producción:
+
+```bash
+npm run build
+```
+
+## Autor
+
+Mauricio Alejandro Rojas
+
+* GitHub: https://github.com/alejandrorojassss
+* LinkedIn: https://www.linkedin.com/in/mauricio-alejandro-rojas-cardenas-769965316/
+* Email: [alejorojascardenas@gmail.com](mailto:alejorojascardenas@gmail.com)
+
+## Licencia
+
+Este proyecto fue desarrollado con fines académicos y profesionales como portafolio personal.
